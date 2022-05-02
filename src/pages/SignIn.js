@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { toast, Toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
@@ -45,55 +45,55 @@ function SignIn() {
 
   return (
     <>
-      <div className="pageContainer">
+      <div className='pageContainer'>
         <header>
-          <p className="pageHeader">Welcome Back!</p>
+          <p className='pageHeader'>Welcome Back!</p>
         </header>
 
         <main>
           <form onSubmit={onSubmit}>
             <input
-              type="email"
-              className="emailInput"
-              placeholder="Email"
-              id="email"
+              type='email'
+              className='emailInput'
+              placeholder='Email'
+              id='email'
               value={email}
               onChange={onChange}
             />
 
-            <div className="passwordInputDiv">
+            <div className='passwordInputDiv'>
               <input
                 type={showPassword ? 'text' : 'password'}
-                className="passwordInput"
-                placeholder="Password"
-                id="password"
+                className='passwordInput'
+                placeholder='Password'
+                id='password'
                 value={password}
                 onChange={onChange}
               />
 
               <img
                 src={visibilityIcon}
-                alt="show password"
-                className="showPassword"
+                alt='show password'
+                className='showPassword'
                 onClick={() => setShowPassword((prevState) => !prevState)}
               />
             </div>
 
-            <Link className="forgotPasswordLink" to="/forgot-password">
+            <Link className='forgotPasswordLink' to='/forgot-password'>
               Forgot Password
             </Link>
 
-            <div className="signInBar">
-              <p className="signInText">Sign In</p>
-              <button className="signInButton">
-                <ArrowRightIcon fill="#fff" width="34px" height="34px" />
+            <div className='signInBar'>
+              <p className='signInText'>Sign In</p>
+              <button className='signInButton'>
+                <ArrowRightIcon fill='#fff' width='34px' height='34px' />
               </button>
             </div>
           </form>
 
           <OAuth />
 
-          <Link className="registerLink" to="/sign-up">
+          <Link className='registerLink' to='/sign-up'>
             Sign Up Instead
           </Link>
         </main>

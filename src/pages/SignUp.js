@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { toast, Toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -62,60 +62,60 @@ function SignUp() {
 
   return (
     <>
-      <div className="pageContainer">
+      <div className='pageContainer'>
         <header>
-          <p className="pageHeader">Welcome Back!</p>
+          <p className='pageHeader'>Welcome Back!</p>
         </header>
 
         <main>
           <form onSubmit={onSubmit}>
             <input
-              type="text"
-              className="nameInput"
-              placeholder="Name"
-              id="name"
+              type='text'
+              className='nameInput'
+              placeholder='Name'
+              id='name'
               value={name}
               onChange={onChange}
             />
 
             <input
-              type="email"
-              className="emailInput"
-              placeholder="Email"
-              id="email"
+              type='email'
+              className='emailInput'
+              placeholder='Email'
+              id='email'
               value={email}
               onChange={onChange}
             />
 
-            <div className="passwordInputDiv">
+            <div className='passwordInputDiv'>
               <input
                 type={showPassword ? 'text' : 'password'}
-                className="passwordInput"
-                placeholder="Password"
-                id="password"
+                className='passwordInput'
+                placeholder='Password'
+                id='password'
                 value={password}
                 onChange={onChange}
               />
 
               <img
                 src={visibilityIcon}
-                alt="show password"
-                className="showPassword"
+                alt='show password'
+                className='showPassword'
                 onClick={() => setShowPassword((prevState) => !prevState)}
               />
             </div>
 
-            <div className="signUpBar">
-              <p className="signUpText">Sign Up</p>
-              <button className="signUpButton">
-                <ArrowRightIcon fill="#fff" width="34px" height="34px" />
+            <div className='signUpBar'>
+              <p className='signUpText'>Sign Up</p>
+              <button className='signUpButton'>
+                <ArrowRightIcon fill='#fff' width='34px' height='34px' />
               </button>
             </div>
           </form>
 
           <OAuth />
 
-          <Link className="registerLink" to="/sign-in">
+          <Link className='registerLink' to='/sign-in'>
             Sign In Instead
           </Link>
         </main>

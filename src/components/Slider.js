@@ -1,13 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {
-  collection,
-  getDocs,
-  query,
-  limit,
-  orderBy,
-  serverTimestamp,
-} from 'firebase/firestore'
+import { collection, getDocs, query, limit, orderBy } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
